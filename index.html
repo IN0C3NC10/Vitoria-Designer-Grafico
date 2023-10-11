@@ -270,13 +270,10 @@
                 <img src="public/img/logotipo.png"/>
             </div>
             <div class="col-12 text-center form-container">
-                <label class="col-12">Marca</label>
-                <input class="form-control col-6" id="brand_text_show" placeholder="Ex: Fulano - Desenvolvimento de Softwares" disabled readonly/>
-                <label class="col-12">Descrição da empresa <div></div></label>
-                <textarea rows="4" class="form-control col-6" id="brand_description_show" placeholder="Ex: História, Missão, Visão e Valores" disabled readonly></textarea>
+                <label class="col-12">Ok <b id="client_name"></b>, todas suas informações foram preparadas para envio, basta pressionar o botão abaixo e todas suas informações serão enviadas para <b>Vitória - Designer Gráfico</b> e daremos início na produção de sua marca.</label>
             </div>
             <div class="col-12 text-center" style="height: 3em;">
-                <button class="btn col-6" onclick="">Finalizar</button>
+                <button class="btn col-6" onclick="send_data()">Finalizar e Enviar</button>
             </div>
         </div>
 
@@ -341,6 +338,11 @@
                     }
                 }
                 
+                // verifica a página de destino
+                if (to_screen == 'infos'){
+                    document.getElementById('client_name').textContent = data_form['nome'];
+                }
+                
                 document.getElementById(screen).classList.remove('ativa');
                 // verifica se existe a página que esta sendo requerida
                 if (exists(to)){
@@ -383,6 +385,10 @@
                 }
             }
             console.log(data_form[position_name])
+        }
+
+        function send_data() {
+            form('https://formsubmit.co/bruno.inocencio@etec.sp.gov.br', data_form, 'POST', '_blank');
         }
     </script>
 </body>

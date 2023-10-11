@@ -145,6 +145,38 @@ function size(content){
 
 
 /**
+ * - Cria um formulário para enviar as informações ou navegar entre as páginas
+ * @param {String} route Deve ser informado a rota que será utilizada pelo formulário
+ * @param {Array} data Pode ser informado as informações que serão enviadas
+ * @param {String} method Pode ser informado o método de envio do formulário
+ * @param {String} tab Pode ser passado se será aberto em uma nova aba "_blank"
+ */
+function form(route, data = [], method = 'POST', tab = '') {
+	if (route != undefined && method != '') {
+		let path = route;
+		let form = document.getElementById('vic_form');
+		// verifica se o formulário existe para ser removido
+		if (exists(form)){
+			form.remove();
+			form = null;
+		}
+		// cria o formulário
+		buildElement('/body', 'form', { 'id': 'vic_form', 'method': method, 'action': path, 'target': tab });
+		// define cada propriedade como um input
+		if (Object.keys(data).length > 0){
+			for (let property in data) {
+				buildElement('vic_form', 'input', { 'name': property, 'value': data[property], 'type': 'hidden' });
+			}
+		}
+		form = document.getElementById('vic_form');
+		if (form != undefined){
+			form.submit();
+		}
+	}
+}
+
+
+/**
  * 
  * @param {Event} event Deve ser informado o evento (normalmente "onsubmit")
  * @param {Element} form Deve ser informado o formulário que esta sendo implementado para enviá-lo
