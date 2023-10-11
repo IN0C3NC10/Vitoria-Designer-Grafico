@@ -163,6 +163,9 @@ function form_validate(form_name, edit = ''){
 			if (exists(validation)){
 				// let lb = elements[i].getElementsByTagName('label')[0];
 				let inp = elements[i].getElementsByTagName('input')[0];
+				if (!exists(inp)){
+					inp = elements[i].getElementsByTagName('textarea')[0];
+				}
 
 				// Verifica qual validação deve se utilizada
 				if (validation.includes('images')){
@@ -187,6 +190,7 @@ function form_validate(form_name, edit = ''){
 					if (size(inp.value) < min){
 						status = false;
 						inp.classList.add('input-error');
+						inp.focus();
 						buildElement(elements[i],'div',{'class':'legend-error'},'Precisa possuir '+min+' ou mais caracteres!');
 					}
 
@@ -194,6 +198,7 @@ function form_validate(form_name, edit = ''){
 					if (format_validation(inp) == false){
 						status = false;
 						inp.classList.add('input-error');
+						inp.focus();
 						buildElement(elements[i],'div',{'class':'legend-error'},'Campo CPF inválido!');
 					}
 
@@ -206,12 +211,14 @@ function form_validate(form_name, edit = ''){
 							if (dataFormatada > dataLimite){
 								status = false;
 								inp.classList.add('input-error');
+								inp.focus();
 								buildElement(elements[i],'div',{'class':'legend-error'},'Precisa ser maior que ontem e menor que 2050!');
 							}
 						}
 					} else {
 						status = false;
 						inp.classList.add('input-error');
+						inp.focus();
 						buildElement(elements[i],'div',{'class':'legend-error'},'Obrigatório preencher a data!');
 					}
 					
@@ -229,6 +236,7 @@ function form_validate(form_name, edit = ''){
 						if (hours > 235959){
 							status = false;
 							inp.classList.add('input-error');
+							inp.focus();
 							buildElement(elements[i],'div',{'class':'legend-error'},'Digite uma hora válida!');
 						}
 					}
@@ -238,12 +246,14 @@ function form_validate(form_name, edit = ''){
 					if (inp.value != field.value || field.value == '' || inp.value == ''){
 						status = false;
 						inp.classList.add('input-error');
+						inp.focus();
 						buildElement(elements[i],'div',{'class':'legend-error'},'Precisa ser igual ao campo '+validation_name+'!');
 					}
 				} else if (validation == 'email'){ // formato de Email
 					if (((inp.value).includes('@') == false && (inp.value).includes('.') == false) || size(inp.value) < 12){
 						status = false;
 						inp.classList.add('input-error');
+						inp.focus();
 						buildElement(elements[i],'div',{'class':'legend-error'},'Preencha com um e-mail válido!');
 					}
 				}

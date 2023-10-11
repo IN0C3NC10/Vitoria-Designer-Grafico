@@ -14,6 +14,7 @@
 
 <body>
     <div class="container">
+        <!-- Tela inicial -->
         <div id="home" class="row screen ativa" onclick="navigate('form_1')">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
@@ -41,13 +42,13 @@
         </div>
        
         <!-- 02. sua empresa -->
-        <div id="form_2" class="row screen form-validate">
+        <div id="form_2" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
             <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Texto para criação da marca</label>
-                <input class="form-control col-6" id="marca_nome" placeholder="Ex: Fulano - Desenvolvimento de Softwares" />
+                <label class="col-12">Nome do seu negócio para criação da marca</label>
+                <input class="form-control col-6" id="marca_nome" placeholder="Ex: Vitória - Designer Gráfico.." />
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_3')">Continuar</button>
@@ -55,13 +56,13 @@
         </div>
 
         <!-- 03. descrição da empresa  -->
-        <div id="form_3" class="row screen form-validate">
+        <div id="form_3" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
+            <div class="col-12 text-center form-container" validate="min-6">
                 <label class="col-12">Descrição resumida de seu trabalho</label>
-                <textarea rows="4" class="form-control col-6" id="marca_descricao" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+                <textarea rows="4" class="form-control col-6" id="marca_descricao" placeholder="Ex: Minha empresa desenvolve a marca para outras empresas e trabalha com Marketing Digital.."></textarea>
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_4')">Continuar</button>
@@ -69,83 +70,83 @@
         </div>
 
         <!-- 04. o que a marca deve transmitir  -->
-        <div id="form_4" class="row screen form-validate">
+        <div id="form_4" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
+            <div class="col-12 text-center form-container" validate="min-6">
                 <label class="col-12">Descreva o que sua logo deve transmitir conceitualmente e visualmente</label>
-                <textarea rows="4" class="form-control col-6" id="marca_transmitir" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+                <textarea rows="4" class="form-control col-6" id="marca_transmitir" placeholder="Ex: História, Missão, Visão e Valores.."></textarea>
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_5')">Continuar</button>
             </div>
         </div>
 
-        <!-- 05. exemplos de logo  -->
-        <div id="form_5" class="row screen form-validate">
+        <!-- 05. exemplos de logo que agradam -->
+        <div id="form_5" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
+            <div class="col-12 text-center form-container" validate="min-6">
                 <label class="col-12">Cite algumas logos que te agradam</label>
-                <textarea rows="4" class="form-control col-6" id="marca_ex_outras_empresas_positivas" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+                <textarea rows="4" class="form-control col-6" id="marca_ex_outras_empresas_positivas" placeholder="Ex: Coca Cola e Dolly.."></textarea>
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_6')">Continuar</button>
             </div>
         </div>
 
-        <!-- 06. -->
-        <div id="form_6" class="row screen form-validate">
+        <!-- 06. exemplos de logos que NÃO agradam -->
+        <div id="form_6" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
-                <label class="col-12">Cite algumas logos que não te agradam</label>
-                <textarea rows="4" class="form-control col-6" id="marca_ex_outras_empresas_negativas" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+            <div class="col-12 text-center form-container" validate="min-6">
+                <label class="col-12">Cite algumas logos que <b>NÃO</b> te agradam</label>
+                <textarea rows="4" class="form-control col-6" id="marca_ex_outras_empresas_negativas" placeholder="Ex: Coca Cola e Dolly.."></textarea>
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_7')">Continuar</button>
             </div>
         </div>
 
-        <!-- 07.  -->
-        <div id="form_7" class="row screen form-validate">
+        <!-- 07. preferência de cor -->
+        <div id="form_7" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
+            <div class="col-12 text-center form-container" validate="min-6">
                 <label class="col-12">Qual sua preferência de cor</label>
-                <textarea rows="4" class="form-control col-6" id="marca_ex_cores_positivas" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+                <input class="form-control col-6" id="marca_ex_cores_positivas" placeholder="Ex: Verde.."/>
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_8')">Continuar</button>
             </div>
         </div>
 
-        <!-- 08.  -->
-        <div id="form_8" class="row screen form-validate">
+        <!-- 08. cores que NÃO serão permitidas -->
+        <div id="form_8" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
-                <label class="col-12">Cores que NÃO deseja possuir em sua logo</label>
-                <textarea rows="4" class="form-control col-6" id="marca_ex_cores_negativas" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+            <div class="col-12 text-center form-container" validate="min-6">
+                <label class="col-12">Cores que <b>NÃO</b> deseja possuir em sua logo</label>
+                <input class="form-control col-6" id="marca_ex_cores_negativas" placeholder="Ex: Verde.." />
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_9')">Continuar</button>
             </div>
         </div>
 
-        <!-- 09.  -->
-        <div id="form_9" class="row screen form-validate">
+        <!-- 09. tipografia da marca -->
+        <div id="form_9" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
-                <label class="col-12">Como deseja que apareça sua criptografia</label>
-                <textarea rows="4" class="form-control col-6" id="marca_ex_tipografia" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+            <div class="col-12 text-center form-container" validate="min-6">
+                <label class="col-12">Como deseja que apareça sua tipografia (Padrão, CAIXA ALTA, minúscula, <i>itálica</i>, <b>Negrita</b>, Manuscrita, etc.)</label>
+                <input class="form-control col-6" id="marca_ex_tipografia" placeholder="Ex: CAIXA ALTA e em Negrito.." />
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_10')">Continuar</button>
@@ -153,12 +154,12 @@
         </div>
 
         <!-- 10. Modelo de logo para fonte -->
-        <div id="form_10" class="row screen form-validate">
+        <div id="form_10" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
             <div class="col-12 text-center form-container" validate="images-just-1">
-                <label class="col-12">Escolha a forma da logo que mais agradar</label>
+                <label class="col-12">Escolha a forma da logo que mais agradar <i>(apenas uma)</i></label>
                 <div class="grid-row">
                     <div class="grid-column">
                       <img onclick="set_img_selected(this,'marca_formato')" class="img_form_10" id="abstrato" src="public/img/enterprises/font/abstrato.jpg">
@@ -178,55 +179,55 @@
             </div>
         </div>
 
-        <!-- 11.  -->
-        <div id="form_11" class="row screen form-validate">
+        <!-- 11. iniciais da marca -->
+        <div id="form_11" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
+            <div class="col-12 text-center form-container" validate="min-6">
                 <label class="col-12">Como deseja as iniciais do nome da empresa</label>
-                <textarea rows="4" class="form-control col-6" id="marca_iniciais" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+                <textarea rows="4" class="form-control col-6" id="marca_iniciais" placeholder="Ex: Vitória - Designer Gráfico; Vic ou VDG.."></textarea>
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_12')">Continuar</button>
             </div>
         </div>
 
-        <!-- 12.  -->
-        <div id="form_12" class="row screen form-validate">
+        <!-- 12. forma das iniciais -->
+        <div id="form_12" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
+            <div class="col-12 text-center form-container" validate="min-6">
                 <label class="col-12">Como prefere a organização das iniciais do nome</label>
-                <textarea rows="4" class="form-control col-6" id="marca_iniciais_formato" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+                <textarea rows="4" class="form-control col-6" id="marca_iniciais_formato" placeholder="Ex: Geométrica ou entrelaçadas.."></textarea>
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_13')">Continuar</button>
             </div>
         </div>
 
-        <!-- 13.  -->
-        <div id="form_13" class="row screen form-validate">
+        <!-- 13. símbolo ao invés das iniciais -->
+        <div id="form_13" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
-            <div class="col-12 text-center form-container">
+            <div class="col-12 text-center form-container" validate="min-6">
                 <label class="col-12">Informe qual símbolo deseja ao invés das iniciais</label>
-                <textarea rows="4" class="form-control col-6" id="marca_iniciais_simbolo" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+                <input rows="4" class="form-control col-6" id="marca_iniciais_simbolo" placeholder="Ex: Código-Fonte ou Engrenagens.." />
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('form_14')">Continuar</button>
             </div>
         </div>
 
-        <!-- 14.  -->
-        <div id="form_14" class="row screen form-validate">
+        <!-- 14. modelos de logo que interessarem -->
+        <div id="form_14" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
             <div class="col-12 text-center form-container" validate="images-max-3">
-                <label class="col-12">Indique os modelos que mais o interessar em relação as figuras</label>
+                <label class="col-12">Indique os modelos que mais o interessar <i>(até três)</i></label>
                 <div class="grid-row">
                     <div class="grid-column">
                       <img onclick="set_img_selected(this,'marca_fonte')" class="img_form_14" id="buzteam" src="public/img/enterprises/buzteam.png">
@@ -249,14 +250,14 @@
             </div>
         </div>
 
-        <!-- 15.  -->
-        <div id="form_15" class="row screen form-validate">
+        <!-- 15. informações adicionais -->
+        <div id="form_15" class="row screen">
             <div class="col-12 text-center img-container">
                 <img src="public/img/logotipo.png"/>
             </div>
             <div class="col-12 text-center form-container">
-                <label class="col-12">Informações adicionais que considera importante</label>
-                <textarea rows="4" class="form-control col-6" id="marca_informacoes_adicionais" placeholder="Ex: História, Missão, Visão e Valores"></textarea>
+                <label class="col-12">Informações adicionais que considera importante, se desejar</label>
+                <textarea rows="4" class="form-control col-6" id="marca_informacoes_adicionais" placeholder="Ex: Preciso de até no máximo um mês, a partir do envio dessas informações.."></textarea>
             </div>
             <div class="col-12 text-center" style="height: 3em;">
                 <button class="btn col-6" onclick="navigate('infos')">Continuar</button>
