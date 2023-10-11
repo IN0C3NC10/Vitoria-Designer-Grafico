@@ -1,0 +1,263 @@
+:root{
+  --white: #fff;
+  --black: #333;
+  --gray: #7E8197;
+  --placeholder:#CACCD4;
+}
+
+*{
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Fonts */
+.fs-40{
+  font-size: 40px !important;
+}
+
+/* Cursor */
+.pointer{
+  cursor: pointer !important;
+}
+
+/* Height */
+.h-40{
+  height: 40px !important;
+}
+
+.h-90p {
+  height: 90% !important;
+}
+.h-100p {
+  height: 100% !important;
+}
+
+/* Padding */
+.pt-0{
+  padding-top: 0px !important;
+}
+.pt-10{
+  padding-top: 10px !important;
+}
+.ph-50{
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
+
+/* Margin */
+.mt-10{
+  margin-top: 10px !important;
+}
+
+.mr-15{
+  margin-right: 15px !important;
+}
+
+/* Display */
+.show {
+  display: block !important;
+}
+.none {
+  display: none !important;
+}
+.hidden {
+  visibility: hidden !important;
+}
+.disabled {
+  cursor: not-allowed;
+  /* pointer-events: none !important; */
+  opacity: .65 !important;
+}
+.self-center{
+  display: flex !important;
+  align-self: center !important;
+}
+
+/* Flex */
+.justify-center{
+  display: flex !important;
+  justify-content: center !important;
+}
+.justify-end{
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-self: baseline;
+}
+.itens-center{
+  display: flex !important;
+  align-items: center !important;
+}
+
+/* Loader */
+#loader{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #361233;
+  color: var(--white);
+  z-index: 99999;
+}
+#loader img{
+  width: 120px;
+  height: auto;
+  z-index: 1;
+}
+
+/* Form e Afins */
+input[type="checkbox"]{
+  cursor: pointer;
+}
+input[type="text"]{
+  color: var(--gray);
+}
+input::placeholder, .form-control::placeholder{
+  color:#CACCD4 !important;
+}
+textarea{
+  resize: none;
+}
+input:focus, textarea:focus{
+  outline: none;
+}
+
+.input-error{
+  border-color: #dc3545;
+}
+.legend-error{
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80%;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* Logo */
+.logo-img{
+  max-width: 300px;
+}
+
+.flex-column{
+  display: flex !important;
+  flex-direction: column !important;
+}
+.flex-content-center{
+  display: flex !important;
+  justify-content: center !important;
+  align-content: center !important;
+}
+.justify-content-center{
+  display: flex !important;
+  justify-content: center !important;
+}
+.justify-content-end{
+  display: flex !important;
+  justify-content: end !important;
+}
+.align-content-center{
+  display: flex !important;
+  align-content: center !important;
+}
+
+.fade-in-image { animation: fadeIn 5s; }
+
+button{
+    background-color: #9A3B3B;
+    color: #fff;
+    font-weight: bolder !important;
+    height: 100%;
+}
+
+.form-container{
+  height: 31em;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
+  padding-top: 2em;
+}
+
+.img-container{
+  height: 4em;
+  padding-top: 10px;
+}
+.img-container img{
+  height: 3em;
+}
+
+.screen{
+  display: none;
+}
+
+.ativa{
+  display: block !important;
+}
+
+.author{
+  color: transparent;
+  background: #666666;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+  font-weight: bolder;
+  opacity: 0.3;
+}
+
+.grid-row{
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+  justify-content: center;
+}
+
+.grid-column {
+  /* flex: 25%;
+  max-width: 25%; */
+  padding: 4px 4px;
+}
+
+.grid-column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 10em;
+  padding: 10px;
+  border: 1px solid red;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.img-selected{
+  border: 3px solid red !important;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
