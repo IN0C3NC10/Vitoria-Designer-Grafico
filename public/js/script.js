@@ -180,6 +180,8 @@ function dateFormat(date, format = null, timezone = 'pt-BR'){
 		return new Intl.DateTimeFormat(timezone, { day: 'numeric', month: 'long', year: 'numeric'} ).format(date);
 	} else if(format == 'dd|mm'){ // 12/02
 		return new Intl.DateTimeFormat(timezone, { day: 'numeric', month: 'numeric'} ).format(date);
+	} else if(format == 'aaaa'){ // 2023
+		return new Intl.DateTimeFormat(timezone, { year: 'numeric'} ).format(date);
 	} else { // 12/02/2023
 		return new Intl.DateTimeFormat(timezone).format(date);
 	}
@@ -247,15 +249,39 @@ function form_validate(form_name, edit = ''){
 					if (validation.includes('just')){
 						let just = parseInt(validation.split('-')[2],10);
 						if (size(images) != just){
+							let help = {
+								'1':'',
+								'2':'',
+								'3':'m',
+							};
+							if (just > 1){
+								help = {
+									'1':'em',
+									'2':'s',
+									'3':'ns',
+								};	
+							}
 							status = false;
-							buildElement(elements[i],'div',{'class':'legend-error'},'Precisa serem selecionadas '+just+' imagens!');
+							buildElement(elements[i],'div',{'class':'legend-error'},'Precisa ser'+help['1']+' selecionada'+help['2']+' somente '+just+' image'+help['3']+'!');
 						}
 						
 					} else if (validation.includes('max')){
 						let max = parseInt(validation.split('-')[2],10);
 						if (size(images) > max || size(images) == 0){
 							status = false;
-							buildElement(elements[i],'div',{'class':'legend-error'},'Precisa serem selecionadas 1 e até '+max+' imagens!');
+							let help = {
+								'1':'',
+								'2':'',
+								'3':'m',
+							};
+							if (max > 1){
+								help = {
+									'1':'em',
+									'2':'s',
+									'3':'ns',
+								};	
+							}
+							buildElement(elements[i],'div',{'class':'legend-error'},'Precisa ser'+help['1']+' selecionada'+help['2']+' 1 e até '+max+' image'+help['3']+'!');
 						}
 					}
 				

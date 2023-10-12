@@ -20,7 +20,7 @@
                 <div>
                     <img src="public/img/logotipo.png"/>
                 </div>
-                <label style="margin-top: 1em;">Obrigado por responder, em breve retornaremos enquanto isso, acompanhe nossas redes sociais!</label>
+                <label style="margin-top: 1em;">Obrigada por responder, em breve retornaremos, enquanto isso, acompanhe nossas redes sociais!</label>
             </div>
             <div class="col-12 justify-content-evenly" style="height: 3em;">
                 <a href="https://www.instagram.com/vitoria.gerete/" title="Instagram" target="_blank">
@@ -39,12 +39,16 @@
                     </svg>
                 </a>
             </div>
+            <div class="justify-content-center align-items-end" style="height: 4em;">
+                <label class="author">  Copyright © <span id="data_footer"></span> Vitória - Designer Gráfico. Desenvolvido por <a class="author" href="https://in0c3nc10.github.io/INO100CIO/" target="_blank">IN0C3NC10</a>.</label>
+            </div>
         </div>
     </div>
    
     <script>
         // retorna a página principal após 30seg
         window.onload = function(){
+            element('data_footer').textContent = dateFormat(timestamp(),'aaaa');
             setTimeout(() => {
                 form('https://in0c3nc10.github.io/Vitoria-Designer-Grafico',[],'get');
             }, 30000);
