@@ -1,8 +1,11 @@
 :root{
+  --one: #9A3B3B;
+  --two: #A86F25;
   --white: #fff;
   --black: #333;
   --gray: #7E8197;
   --placeholder:#CACCD4;
+  --error: #dc3545;
 }
 
 *{
@@ -72,26 +75,6 @@ body {
   /* pointer-events: none !important; */
   opacity: .65 !important;
 }
-.self-center{
-  display: flex !important;
-  align-self: center !important;
-}
-
-/* Flex */
-.justify-center{
-  display: flex !important;
-  justify-content: center !important;
-}
-.justify-end{
-  display: flex !important;
-  justify-content: flex-end !important;
-  align-self: baseline;
-}
-.itens-center{
-  display: flex !important;
-  align-items: center !important;
-}
-
 
 /* Form e Afins */
 input[type="checkbox"]{
@@ -101,7 +84,7 @@ input[type="text"]{
   color: var(--gray);
 }
 input::placeholder, .form-control::placeholder{
-  color:#CACCD4 !important;
+  color: var(--placeholder) !important;
 }
 textarea{
   resize: none;
@@ -109,20 +92,22 @@ textarea{
 input:hover, textarea:hover, input:focus, textarea:focus, input:focus-visible, textarea:focus-visible{
   outline: none !important;
   border: none !important;
-  box-shadow: 0 0 0 .2rem #D3B791 !important;
+  box-shadow: 0 0 0 .2rem var(--two) !important;
 }
 
 .input-error{
-  border-color: #dc3545;
+  border-color: var(--error);
 }
 .legend-error{
   width: 100%;
   margin-top: .25rem;
   font-size: 80%;
-  color: #dc3545;
+  color: var(--error);
   font-weight: bold;
 }
 
+
+/* Flex */
 .flex-column{
   display: flex !important;
   flex-direction: column !important;
@@ -136,20 +121,32 @@ input:hover, textarea:hover, input:focus, textarea:focus, input:focus-visible, t
   display: flex !important;
   justify-content: center !important;
 }
+.justify-content-evenly{
+  display: flex !important;
+  justify-content: space-evenly !important;
+}
 .justify-content-end{
   display: flex !important;
   justify-content: end !important;
+}
+.align-self-center{
+  display: flex !important;
+  align-self: center !important;
 }
 .align-content-center{
   display: flex !important;
   align-content: center !important;
 }
+.align-itens-center{
+  display: flex !important;
+  align-items: center !important;
+}
 
 .fade-in-image { animation: fadeIn 5s; }
 
 button{
-    background-color: #9A3B3B;
-    color: #fff;
+    background-color: var(--one);
+    color: var(--white);
     font-weight: bolder !important;
     height: 100%;
 }
@@ -211,13 +208,21 @@ button{
   vertical-align: middle;
   width: 10em;
   padding: 10px;
-  border: 1px solid red;
+  border: 1px solid var(--one);
   margin-left: 2px;
   margin-right: 2px;
 }
 
 .img-selected{
-  border: 3px solid red !important;
+  border: 3px solid var(--one) !important;
+}
+
+.icons{
+  color: var(--one);
+  cursor: pointer;
+}
+.icons:hover{
+  color: var(--two);
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */

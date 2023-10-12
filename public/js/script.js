@@ -145,6 +145,48 @@ function size(content){
 
 
 /**
+ * - Retorna o timestamp a partir de uma data passada ou retorna o timestamp atual
+ * @param {Mixed} date Pode ser passada a data que deseja obter o timestamp
+ * @param {Integer} hour Pode ser passado as horas da data
+ * @returns 
+ */
+function timestamp(date = null, hour = 0){
+	let time = 60*1000;
+	if (hour != 0){ // horas
+		time = hour * 60 * time;
+	}
+	if (date == null){
+		return new Date().getTime() + time;
+	} else {
+		return new Date(date).getTime() + time;
+	}
+}
+
+
+/**
+ * - Formata as datas para o padrão pt-BR
+ * @param {Date} date Deve ser informado a data que deseja ser convertida
+ * @param {String} format Define o formato com o qual a data deverá ser retornada
+ * @param {String} timezone Pode ser passado a timezone a ser trabalhada
+ * @returns Data em formato textual formatada
+ */
+function dateFormat(date, format = null, timezone = 'pt-BR'){
+	date = new Date(date);
+	if (format == 'dd|mes.|aaaa hh|mm'){ // 12 de fev. de 2023 12:11
+		return new Intl.DateTimeFormat(timezone, { day: 'numeric', month: 'short', year: 'numeric',hour:'numeric',minute:'numeric'} ).format(date);
+	} else if(format == 'dd|mes.|aaaa'){ // 12 de fev. de 2023
+		return new Intl.DateTimeFormat(timezone, { day: 'numeric', month: 'short', year: 'numeric'} ).format(date);
+	} else if(format == 'dd|mes|aaaa'){ // 12 de fevereiro de 2023
+		return new Intl.DateTimeFormat(timezone, { day: 'numeric', month: 'long', year: 'numeric'} ).format(date);
+	} else if(format == 'dd|mm'){ // 12/02
+		return new Intl.DateTimeFormat(timezone, { day: 'numeric', month: 'numeric'} ).format(date);
+	} else { // 12/02/2023
+		return new Intl.DateTimeFormat(timezone).format(date);
+	}
+};
+
+
+/**
  * - Cria um formulário para enviar as informações ou navegar entre as páginas
  * @param {String} route Deve ser informado a rota que será utilizada pelo formulário
  * @param {Array} data Pode ser informado as informações que serão enviadas

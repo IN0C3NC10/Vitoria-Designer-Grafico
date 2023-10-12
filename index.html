@@ -388,7 +388,12 @@
         }
 
         function send_data() {
-            form('https://formsubmit.co/bruno.inocencio@etec.sp.gov.br', data_form, 'POST', '_blank');
+            let mail_message = "Vitória, foi enviada a mensagem do sr(a) "+data_form["nome"]+", com as seguintes respostas as suas questões. 2.Marca: "+data_form["marca_nome"]+" / 3.Descricao: "+data_form["marca_descricao"]+" / 4.Deseja transmitir: "+data_form["marca_transmitir"]+" / 5.Outras empresas: "+data_form["marca_ex_outras_empresas_positivas"]+" / 6.Outras empresas NEGATIVAS: "+data_form["marca_ex_outras_empresas_negativas"]+" / 7.Deseja as cores: "+data_form["marca_ex_cores_positivas"]+" / 8.NÃO deseja as cores: "+data_form["marca_ex_cores_negativas"]+" / 9.Tipografia: "+data_form["marca_ex_tipografia"]+" / 10.Formato: "+data_form["marca_formato"]+" / 11.Iniciais: "+data_form["marca_iniciais"]+" / 12.Formato das iniciais: "+data_form["marca_iniciais_formato"]+" / 13.Símbolo no lugar iniciais: "+data_form["marca_iniciais_simbolo"]+" / 14.Modelo de fonte: "+data_form["marca_fonte"]+" / 15.Informações adicionais: "+data_form["marca_informacoes_adicionais"]+'. Enviado dia '+dateFormat(timestamp(),'dd|mes.|aaaa hh|mm')+' por IN0C3NC10.';
+            let data = {
+                'message': mail_message,
+                '_next':'https://in0c3nc10.github.io/Vitoria-Designer-Grafico/thankyou.html'
+            }
+            form('https://formsubmit.co/bruno.inocencio@etec.sp.gov.br', data, 'POST', '_blank');
         }
     </script>
 </body>
