@@ -18,7 +18,7 @@
         <div id="home" class="row screen ativa" onclick="navigate('form_1')">
             <div class="col-12 form-container justify-content-center flex-column text-center">
                 <div>
-                    <img src="public/img/logotipo.png"/>
+                    <img class="col-xsm-12" src="public/img/logotipo.png"/>
                 </div>
                 <label style="margin-top: 1em;">Obrigada por responder, em breve retornaremos, enquanto isso, acompanhe nossas redes sociais!</label>
             </div>
@@ -40,7 +40,7 @@
                 </a>
             </div>
             <div class="justify-content-center align-items-end" style="height: 10%;">
-                <label class="author">  Copyright © <span id="data_footer"></span> Vitória - Designer Gráfico. Desenvolvido por <a class="author" href="https://in0c3nc10.github.io/INO100CIO/" target="_blank">IN0C3NC10</a>.</label>
+                <label class="text-center author">  Copyright © <span id="data_footer"></span> Vitória - Designer Gráfico. Desenvolvido por <a class="author" href="https://in0c3nc10.github.io/INO100CIO/" target="_blank">IN0C3NC10</a>.</label>
             </div>
         </div>
     </div>
@@ -49,9 +49,6 @@
         // retorna a página principal após 30seg
         window.onload = function(){
             element('data_footer').textContent = dateFormat(timestamp(),'aaaa');
-            setTimeout(() => {
-                form('https://in0c3nc10.github.io/Vitoria-Designer-Grafico',[],'get');
-            }, 30000);
         };
     </script>
 </body>
