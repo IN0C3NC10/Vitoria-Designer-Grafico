@@ -1,4 +1,0 @@
-<FilesMatch \.(css|js|png)$>
-    Order allow,deny
-    Deny from all
-</FilesMatch>
