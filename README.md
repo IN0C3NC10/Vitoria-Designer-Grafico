@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Vitória - Designer Gráfico</h1>
 <p align="center">
-  <img height="200" alt="Vitória - Designer Gráfico" title="Vitória - Designer Gráfico" src="./public/img/logotipo.png" />
+  <img height="150" alt="Vitória - Designer Gráfico" title="Vitória - Designer Gráfico" src="./public/img/logotipo.png" />
 </p>
 
 <!-- Título&Descrição -->
