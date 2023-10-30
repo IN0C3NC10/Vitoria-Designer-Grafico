@@ -87,7 +87,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="min-3">
-                <label class="col-12">Nome completo</label>
+                <label id="question_nome" class="col-12">Nome completo</label>
                 <input class="form-control col-6" id="nome" placeholder="Informe seu nome..." />
             </div>
             <div class="col-12 justify-content-center footer">
@@ -130,7 +130,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Nome do seu negócio para criação da marca</label>
+                <label id="question_marca_nome" class="col-12">Nome do seu negócio para criação da marca</label>
                 <input class="form-control col-6" id="marca_nome" placeholder="Ex: Vitória - Designer Gráfico.." />
             </div>
             <div class="col-12 justify-content-center footer">
@@ -173,7 +173,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Descrição resumida de seu trabalho</label>
+                <label id="question_marca_descricao" class="col-12">Descrição resumida de seu trabalho</label>
                 <textarea rows="4" class="form-control col-6" id="marca_descricao" placeholder="Ex: Minha empresa desenvolve a marca para outras empresas e trabalha com Marketing Digital.."></textarea>
             </div>
             <div class="col-12 justify-content-center footer">
@@ -216,7 +216,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Descreva o que sua logo deve transmitir conceitualmente e visualmente</label>
+                <label id="question_marca_transmitir" class="col-12">Descreva o que gostaria de transmitir para os seus futuros clientes</label>
                 <textarea rows="4" class="form-control col-6" id="marca_transmitir" placeholder="Ex: História, Missão, Visão e Valores.."></textarea>
             </div>
             <div class="col-12 justify-content-center footer">
@@ -258,8 +258,8 @@
                     <div class="progress_bar" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 60">60%</div>
                 </div>
             </div>
-            <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Cite algumas logos que te agradam</label>
+            <div class="col-12 text-center form-container">
+                <label id="question_marca_ex_outras_empresas_positivas" class="col-12">Cite algumas logos que te agradam</label>
                 <textarea rows="4" class="form-control col-6" id="marca_ex_outras_empresas_positivas" placeholder="Ex: Coca Cola e Dolly.."></textarea>
             </div>
             <div class="col-12 justify-content-center footer">
@@ -301,8 +301,8 @@
                     <div class="progress_bar" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 60">60%</div>
                 </div>
             </div>
-            <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Cite algumas logos que <b>NÃO</b> te agradam</label>
+            <div class="col-12 text-center form-container">
+                <label id="question_marca_ex_outras_empresas_negativas" class="col-12">Cite algumas logos que <b>NÃO</b> te agradam</label>
                 <textarea rows="4" class="form-control col-6" id="marca_ex_outras_empresas_negativas" placeholder="Ex: Coca Cola e Dolly.."></textarea>
             </div>
             <div class="col-12 justify-content-center footer">
@@ -344,8 +344,8 @@
                     <div class="progress_bar" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 60">60%</div>
                 </div>
             </div>
-            <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Qual sua preferência de cor</label>
+            <div class="col-12 text-center form-container">
+                <label id="question_marca_ex_cores_positivas" class="col-12">Qual sua preferência de cor</label>
                 <input class="form-control col-6" id="marca_ex_cores_positivas" placeholder="Ex: Verde.."/>
             </div>
             <div class="col-12 justify-content-center footer">
@@ -387,8 +387,8 @@
                     <div class="progress_bar" role="progressbar" aria-valuenow="67" aria-valuemin="0" aria-valuemax="100" style="--value: 60">60%</div>
                 </div>
             </div>
-            <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Cores que <b>NÃO</b> deseja possuir em sua logo</label>
+            <div class="col-12 text-center form-container">
+                <label id="question_marca_ex_cores_negativas" class="col-12">Cores que <b>NÃO</b> deseja possuir em sua logo</label>
                 <input class="form-control col-6" id="marca_ex_cores_negativas" placeholder="Ex: Verde.." />
             </div>
             <div class="col-12 justify-content-center footer">
@@ -431,7 +431,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Como deseja que apareça sua tipografia (Padrão, CAIXA ALTA, minúscula, <i>itálica</i>, <b>Negrita</b>, Manuscrita, etc.)</label>
+                <label id="question_marca_ex_tipografia" class="col-12">Como deseja que apareça sua tipografia (Padrão, CAIXA ALTA, minúscula, <i>itálica</i>, <b>Negrita</b>, Manuscrita, etc.)</label>
                 <input class="form-control col-6" id="marca_ex_tipografia" placeholder="Ex: CAIXA ALTA e em Negrito.." />
             </div>
             <div class="col-12 justify-content-center footer">
@@ -474,7 +474,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="images-just-1">
-                <label class="col-12">Escolha a forma da logo que mais agradar <i>(apenas uma)</i></label>
+                <label id="question_marca_formato" class="col-12">Escolha a forma da logo que mais agradar <i>(apenas uma)</i></label>
                 <div class="grid-row">
                     <div class="grid-column">
                       <img onclick="set_img_selected(this,'marca_formato')" class="img_form_10" id="abstrato" src="public/img/enterprises/font/abstrato.jpg">
@@ -529,7 +529,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Como deseja as iniciais do nome da empresa</label>
+                <label id="question_marca_iniciais" class="col-12">Como deseja as iniciais do nome da empresa</label>
                 <textarea rows="4" class="form-control col-6" id="marca_iniciais" placeholder="Ex: Vitória - Designer Gráfico; Vic ou VDG.."></textarea>
             </div>
             <div class="col-12 justify-content-center footer">
@@ -572,7 +572,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Como prefere a organização das iniciais do nome</label>
+                <label id="question_marca_iniciais_formato" class="col-12">Como prefere a organização das iniciais do nome</label>
                 <textarea rows="4" class="form-control col-6" id="marca_iniciais_formato" placeholder="Ex: Geométrica ou entrelaçadas.."></textarea>
             </div>
             <div class="col-12 justify-content-center footer">
@@ -615,7 +615,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="min-6">
-                <label class="col-12">Informe qual símbolo deseja ao invés das iniciais</label>
+                <label id="question_marca_iniciais_simbolo" class="col-12">Informe qual símbolo deseja ao invés das iniciais</label>
                 <input rows="4" class="form-control col-6" id="marca_iniciais_simbolo" placeholder="Ex: Código-Fonte ou Engrenagens.." />
             </div>
             <div class="col-12 justify-content-center footer">
@@ -658,7 +658,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container" validate="images-max-3">
-                <label class="col-12">Indique os modelos que mais o interessar <i>(até três)</i></label>
+                <label id="question_marca_fonte" class="col-12">Indique os modelos que mais o interessar <i>(até três)</i></label>
                 <div class="grid-row">
                     <div class="grid-column">
                       <img onclick="set_img_selected(this,'marca_fonte')" class="img_form_14" id="buzteam" src="public/img/enterprises/buzteam.png">
@@ -716,7 +716,7 @@
                 </div>
             </div>
             <div class="col-12 text-center form-container">
-                <label class="col-12">Informações adicionais que considera importante, se desejar</label>
+                <label id="question_marca_informacoes_adicionais" class="col-12">Informações adicionais que considera importante, se desejar</label>
                 <textarea rows="4" class="form-control col-6" id="marca_informacoes_adicionais" placeholder="Ex: Preciso de até no máximo um mês, a partir do envio dessas informações.."></textarea>
             </div>
             <div class="col-12 justify-content-center footer">
@@ -946,20 +946,40 @@
         }
 
         function send_data() {
-            let mail_message = "Vitória, foi enviada a mensagem do sr(a) "+data_form["nome"]+", com as seguintes respostas as suas questões. 2.Marca: "+data_form["marca_nome"]+" / 3.Descricao: "+data_form["marca_descricao"]+" / 4.Deseja transmitir: "+data_form["marca_transmitir"]+" / 5.Outras empresas: "+data_form["marca_ex_outras_empresas_positivas"]+" / 6.Outras empresas NEGATIVAS: "+data_form["marca_ex_outras_empresas_negativas"]+" / 7.Deseja as cores: "+data_form["marca_ex_cores_positivas"]+" / 8.NÃO deseja as cores: "+data_form["marca_ex_cores_negativas"]+" / 9.Tipografia: "+data_form["marca_ex_tipografia"]+" / 10.Formato: "+data_form["marca_formato"]+" / 11.Iniciais: "+data_form["marca_iniciais"]+" / 12.Formato das iniciais: "+data_form["marca_iniciais_formato"]+" / 13.Símbolo no lugar iniciais: "+data_form["marca_iniciais_simbolo"]+" / 14.Modelo de fonte: "+data_form["marca_fonte"]+" / 15.Informações adicionais: "+data_form["marca_informacoes_adicionais"]+'. Enviado dia '+dateFormat(timestamp(),'dd|mes.|aaaa hh|mm')+'.';
+            let questions = 0;
+            let mail_message = "Vitória, foi enviada a mensagem do sr(a) "+data_form["nome"]+", com as seguintes respostas as suas questões: ";
             let data = {
-                'message': mail_message,
+                'message': '',
                 'to_name':'Vitória',
                 'from_name':'Vitória - Designer Gráfico',
             }
-            
-            emailjs.send('service_8dox4sk', 'template_ixr6l7d', data)
-            .then(function(response) {
-                form('https://in0c3nc10.github.io/Vitoria-Designer-Grafico/thankyou.html',[],'get');
-            }, function(error) {
-                console.log('FAILED...', error);
+
+            for (let key in data_form) {
+                let question = document.getElementById('question_'+key);
+                if (exists(question) && exists(data_form[key])){
+                    questions++;
+                    if (exists(question.textContent)){
+                        mail_message+= questions+'. '+question.textContent+' = '+data_form[key]+'  &  ';
+                    }
+                }
+            }
+
+            // verifica se foram encontradas as questões
+            if (questions > 0){
+                mail_message+=". Enviado dia "+dateFormat(timestamp(),'dd|mes.|aaaa hh|mm')+'.';
+                data['message'] = mail_message;
+    
+                emailjs.send('service_8dox4sk', 'template_ixr6l7d', data)
+                .then(function(response) {
+                    form('https://in0c3nc10.github.io/Vitoria-Designer-Grafico/thankyou.html',[],'get');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    navigate('error_500');
+                });
+            } else {
+                console.log('ERROR:..Não foi encontrado todas as questões!');
                 navigate('error_500');
-            });
+            }
         }
     </script>
 </body>

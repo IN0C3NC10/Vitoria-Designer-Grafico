@@ -46,6 +46,11 @@ body {
   height: 100%;
 }
 
+body{
+  background-color: #f4f2f2;
+  background-image: url('./public/img/background.png');
+}
+
 a, a:visited{
   color: var(--black);
   text-decoration: none !important;
@@ -195,6 +200,11 @@ button{
   color: var(--white);
   font-weight: bolder !important;
   height: 100%;
+}
+
+.container{
+  border-radius: 1em;
+  background-color: #fff;
 }
 
 .form-container{
